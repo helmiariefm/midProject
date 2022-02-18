@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body id="body" class="bg-white">    
+    <div id="navMenu" class="fixed z-20 left-0 top-0 w-screen h-screen bg-secondary items-center justify-center hidden">
+        <button class="absolute right-16 top-10" onclick="handleNavMenu()">
+            <img class="w-10"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VisualEditor_-_Icon_-_Close_-_white.svg/1200px-VisualEditor_-_Icon_-_Close_-_white.svg.png"
+                alt="">
+        </button>
+        <ul class="text-white text-center text-5xl font-light space-y-12 tracking-widest">
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="index.html">HOME</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="about.html">ABOUT</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="#">FUN</a></li>
+        </ul>
+    </div>
+    <section class=" dark:bg-zinc-800 h-screen flex items-center justify-center flex-col">
+        <h1 class="text-white text-3xl font-bold space-x-9 mb-10">Welcome To Dark Mode</h1>
+        <div class="grid grid-cols-3">
+            <div class="m-1 place-self-end">
+                <img class="w-7" src="/src/images/sun.png" alt="sun">
+            </div>
+
+            <button onclick="handleToggle()">
+                <div class="darkModeToggle bg-amber-200 dark:bg-zinc-300">
+                    <div class="switcher bg-amber-400 dark:bg-zinc-500"></div>
+                </div>
+            </button>
+    
+            <div class="m-1">
+                <img class="w-7" src="/src/images/moon.png" alt="moon">
+            </div>
+        </div>
+        <p class="text-white mt-3">It's fun for me because finaly I can created my own Dark Mode with my own toggle design :D</p>
+       <button class="button dark:text-white space-x-9 mt-7" onclick="handleNavMenu()">Menu</button>
+    </section>
+
+    <script>
+        function handleToggle(){
+            const body = document.querySelector('#body')
+            const isActive = body.classList.contains('bg-white')
+
+            if(isActive){
+                body.classList.remove('bg-white')
+                body.classList.add('dark')
+            } else {
+                body.classList.add('bg-white')
+                body.classList.remove('dark')
+            }
+        }
+
+        function handleNavMenu() {
+            const navMenu = document.querySelector('#navMenu')
+            const isActive = navMenu.classList.contains('flex')
+
+            if (isActive) {
+                navMenu.classList.remove('flex')
+                navMenu.classList.add('hidden')
+            } else {
+                navMenu.classList.add('flex')
+                navMenu.classList.remove('hidden')
+            }
+        }
+    </script>
+</body>
+</html>
