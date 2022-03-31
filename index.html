@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Helmi</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container md:px-32 flex justify-between ">
+            <a href="index.html"><img src="/src/images/logo.gif" alt="logo" class="w-8 h-8"></a>
+            <button class="relative bg-white" onclick="handleNavMenu()">
+                <img class="w-7" src="http://cdn.onlinewebfonts.com/svg/img_545657.png" />
+            </button>
+        </div>
+    </nav>
+    <div id="navMenu" class="fixed z-20 left-0 top-0 w-screen h-screen bg-secondary items-center justify-center hidden">
+        <button class="absolute right-16 top-10" onclick="handleNavMenu()">
+            <img class="w-10"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VisualEditor_-_Icon_-_Close_-_white.svg/1200px-VisualEditor_-_Icon_-_Close_-_white.svg.png"
+                alt="">
+        </button>
+        <ul class="text-white text-center text-5xl font-light space-y-12 tracking-widest">
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="#">HOME</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="about.html">ABOUT</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors" href="fun.html">FUN</a></li>
+        </ul>
+    </div>
+    <header class="relative container py-24 md:px-32 pt-20 md:mt-24">
+        <div class="relative z-10 space-y-8 py-10">
+            <h1 class="text-6xl md:text-8xl font-secondary font-extrabold">Hello, <br /> I'm Helmi.</h1>
+            <div class="text-xl md:text-2xl font-light space-y-2">
+                <div>Frontend Developer</div>
+                <div>UI/UIX Designer</div>
+            </div>
+        </div>
+        <img class="md:absolute right-0 top-0 md:w-3/4 md:pr-32 md:h-full object-cover"
+            src="https://malu.im/wp-content/uploads/2018/03/IMG_4104-min.jpg" alt="">
+    </header>
+    <section id="about" class="container space-y-8 py-24 md:py-52 md:px-32">
+        <p style="max-width: 800px;" class="text-2xl font-light">I'm an interaction designer and now based in Berlin. I
+            like to resolve design problems, create smart user interface and imagine useful interaction, focusing on the
+            user-centered design. </p>
+        <button class="button">ABOUT ME</button>
+    </section>
+    <section id="project" class="container md:px-32">
+        <div class="project-wrapper">
+            <a href="#" class="project-item">
+                <div class="project-item-title">
+                    <p>WALLSTREET DEVOPS</p>
+                </div>
+                <img class="project-item-thumbnail"
+                    src="https://malu.im/wp-content/uploads/2018/09/wlanometer_cover-1.jpg"
+                    alt="">
+            </a>
+            <a href="#" class="project-item">
+                <div class="project-item-title">
+                    <p>WALLSTREET DEVOPS</p>
+                </div>
+                <img class="project-item-thumbnail"
+                    src="https://malu.im/wp-content/uploads/2018/09/cam_cover.jpg"
+                    alt="">
+            </a>
+            <a href="#" class="project-item">
+                <div class="project-item-title">
+                    <p>WALLSTREET DEVOPS</p>
+                </div>
+                <img class="project-item-thumbnail"
+                    src="https://malu.im/wp-content/uploads/2018/09/plantplayer_cover-2.jpg"
+                    alt="">
+            </a>
+            <a href="#" class="project-item">
+                <div class="project-item-title">
+                    <p>WALLSTREET DEVOPS</p>
+                </div>
+                <img class="project-item-thumbnail"
+                    src="https://malu.im/wp-content/uploads/2019/11/meinwlan_header-1-scaled.png"
+                    alt="">
+            </a>
+        </div>
+    </section>
+    <footer class="mt-40 bg-secondary py-40">
+        <div class="container flex flex-col md:flex-row md:px-32 items-center">
+            <p class="text-gray-500 text-2xl md:text-3xl font-secondary leading-normal">I’m always up for adventure and
+                international opportunities. Feel free to say hello via <a class="text-white font-secondary"
+                    href="mailto:rayhanprima99@gmail.com">helmiariefm@gmail.com</a>
+            </p>
+            <div class="flex flex-col items-center">
+                <img src="https://malu.im/wp-content/uploads/2018/02/resume2-1.png" alt="">
+                <button class="button-white">DOWNLOAD CV</button>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function handleNavMenu() {
+            const navMenu = document.querySelector('#navMenu')
+            const isActive = navMenu.classList.contains('flex')
+
+            if (isActive) {
+                navMenu.classList.remove('flex')
+                navMenu.classList.add('hidden')
+            } else {
+                navMenu.classList.add('flex')
+                navMenu.classList.remove('hidden')
+            }
+        }
+    </script>
+</body>
+
+</html>
