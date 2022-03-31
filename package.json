@@ -1,0 +1,9 @@
+{
+	"dependencies": {
+		"gh-pages": "^3.2.3"
+	},
+	"scripts": {
+		"deploy": "gh-pages -d src"
+	},
+	"homepage": "https://github.com/helmiariefm/midProject"
+}
